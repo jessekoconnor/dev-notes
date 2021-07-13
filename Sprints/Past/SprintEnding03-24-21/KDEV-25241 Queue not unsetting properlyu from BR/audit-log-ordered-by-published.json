@@ -1,0 +1,1076 @@
+[
+    {
+      "type": "audit_log",
+      "id": "603671a5f3821c223aeb881f",
+      "attributes": {
+        "eventName": "kustomer.message.create",
+        "eventVerb": "create",
+        "org": "5bc5de5b5f2b2a001142dfa0",
+        "userId": "5f2884b751e0530012e14301",
+        "userType": "user",
+        "objectId": "603670ff562e73001a62c285",
+        "objectType": "message",
+        "client": "postmark-drafts-sender",
+        "ip": null,
+        "changes": null,
+        "createdAt": "2021-02-24T15:32:54.757Z",
+        "publishedAt": "2021-02-24T15:32:53.611Z",
+        "expiresAt": "2022-02-24T15:32:54.757Z"
+      },
+      "relationships": {
+        "customer": {
+          "links": {
+            "self": "/v1/customers/601f1d6dd7c4f3a0664544cd"
+          },
+          "data": {
+            "type": "customer",
+            "id": "601f1d6dd7c4f3a0664544cd"
+          }
+        },
+        "conversation": {
+          "links": {
+            "self": "/v1/conversations/6033f1f5d72347298d7b11c7"
+          },
+          "data": {
+            "type": "conversation",
+            "id": "6033f1f5d72347298d7b11c7"
+          }
+        },
+        "user": {
+          "links": {
+            "self": "/v1/users/5f2884b751e0530012e14301"
+          },
+          "data": {
+            "type": "user",
+            "id": "5f2884b751e0530012e14301"
+          }
+        }
+      },
+      "publishedAt": "2021-02-24T15:32:53.611Z",
+      "createdAt": "2021-02-24T15:32:54.757Z",
+      "expiresAt": "2022-02-24T15:32:54.757Z",
+      "originalIndex": 0
+    },
+    {
+      "type": "audit_log",
+      "id": "60367164f344790019f812d9",
+      "attributes": {
+        "eventName": "kustomer.work-item.update",
+        "eventVerb": "update",
+        "org": "5bc5de5b5f2b2a001142dfa0",
+        "userId": null,
+        "userType": "system",
+        "objectId": "6033f1f7bd3ebb00197360a1",
+        "objectType": "work_item",
+        "client": "routing-worker",
+        "ip": null,
+        "changes": {
+          "attributes": {
+            "status": {
+              "op": "replace",
+              "before": "assigned",
+              "after": "completed"
+            },
+            "completedAt": {
+              "op": "add",
+              "before": null,
+              "after": "2021-02-24T15:31:48.830Z"
+            }
+          },
+          "relationships": {}
+        },
+        "createdAt": "2021-02-24T15:31:49.632Z",
+        "publishedAt": "2021-02-24T15:31:48.946Z",
+        "expiresAt": "2021-05-25T15:31:49.632Z"
+      },
+      "relationships": {
+        "conversation": {
+          "links": {
+            "self": "/v1/conversations/6033f1f5d72347298d7b11c7"
+          },
+          "data": {
+            "type": "conversation",
+            "id": "6033f1f5d72347298d7b11c7"
+          }
+        },
+        "user": {
+          "links": {
+            "self": "/v1/users/null"
+          },
+          "data": {
+            "type": "user",
+            "id": null
+          }
+        }
+      },
+      "publishedAt": "2021-02-24T15:31:48.946Z",
+      "createdAt": "2021-02-24T15:31:49.632Z",
+      "expiresAt": "2021-05-25T15:31:49.632Z",
+      "originalIndex": 1
+    },
+    {
+      "type": "audit_log",
+      "id": "60367164948bbace3eaa5253",
+      "attributes": {
+        "eventName": "kustomer.conversation.update",
+        "eventVerb": "update",
+        "org": "5bc5de5b5f2b2a001142dfa0",
+        "userId": "5f2884b751e0530012e14301",
+        "userType": "user",
+        "objectId": "6033f1f5d72347298d7b11c7",
+        "objectType": "conversation",
+        "client": "api",
+        "ip": null,
+        "changes": {
+          "attributes": {
+            "ended": {
+              "op": "replace",
+              "before": false,
+              "after": true
+            },
+            "endedReason": {
+              "op": "add",
+              "before": null,
+              "after": "user_ended"
+            },
+            "status": {
+              "op": "replace",
+              "before": "open",
+              "after": "done"
+            }
+          },
+          "relationships": {}
+        },
+        "createdAt": "2021-02-24T15:31:48.899Z",
+        "publishedAt": "2021-02-24T15:31:48.412Z",
+        "expiresAt": "2021-05-25T15:31:48.899Z"
+      },
+      "relationships": {
+        "customer": {
+          "links": {
+            "self": "/v1/customers/601f1d6dd7c4f3a0664544cd"
+          },
+          "data": {
+            "type": "customer",
+            "id": "601f1d6dd7c4f3a0664544cd"
+          }
+        },
+        "user": {
+          "links": {
+            "self": "/v1/users/5f2884b751e0530012e14301"
+          },
+          "data": {
+            "type": "user",
+            "id": "5f2884b751e0530012e14301"
+          }
+        }
+      },
+      "publishedAt": "2021-02-24T15:31:48.412Z",
+      "createdAt": "2021-02-24T15:31:48.899Z",
+      "expiresAt": "2021-05-25T15:31:48.899Z",
+      "originalIndex": 2
+    },
+    {
+      "type": "audit_log",
+      "id": "60367163e9e200628fbea5f5",
+      "attributes": {
+        "eventName": "kustomer.conversation.update",
+        "eventVerb": "update",
+        "org": "5bc5de5b5f2b2a001142dfa0",
+        "userId": "5f2884b751e0530012e14301",
+        "userType": "user",
+        "objectId": "6033f1f5d72347298d7b11c7",
+        "objectType": "conversation",
+        "client": "api",
+        "ip": null,
+        "changes": {
+          "attributes": {
+            "custom": {
+              "op": "replace",
+              "before": {
+                "estimatedBillDateAt": "2021-03-04T14:30:00.000Z",
+                "lastBillDateAt": "2021-02-06T23:03:30.000Z",
+                "contactReasonsTree": "account_subscription.billing1"
+              },
+              "after": {
+                "estimatedBillDateAt": "2021-03-04T14:30:00.000Z",
+                "lastBillDateAt": "2021-02-06T23:03:30.000Z",
+                "contactReasonsTree": "account_subscription.billing1",
+                "experimentsInitiativesTree": "none",
+                "subContactReasonTree": "none"
+              }
+            }
+          },
+          "relationships": {}
+        },
+        "createdAt": "2021-02-24T15:31:49.478Z",
+        "publishedAt": "2021-02-24T15:31:47.985Z",
+        "expiresAt": "2021-05-25T15:31:49.478Z"
+      },
+      "relationships": {
+        "customer": {
+          "links": {
+            "self": "/v1/customers/601f1d6dd7c4f3a0664544cd"
+          },
+          "data": {
+            "type": "customer",
+            "id": "601f1d6dd7c4f3a0664544cd"
+          }
+        },
+        "user": {
+          "links": {
+            "self": "/v1/users/5f2884b751e0530012e14301"
+          },
+          "data": {
+            "type": "user",
+            "id": "5f2884b751e0530012e14301"
+          }
+        }
+      },
+      "publishedAt": "2021-02-24T15:31:47.985Z",
+      "createdAt": "2021-02-24T15:31:49.478Z",
+      "expiresAt": "2021-05-25T15:31:49.478Z",
+      "originalIndex": 3
+    },
+    {
+      "type": "audit_log",
+      "id": "603670ddf6e1f479e2219eb9",
+      "attributes": {
+        "eventName": "kustomer.conversation.update",
+        "eventVerb": "update",
+        "org": "5bc5de5b5f2b2a001142dfa0",
+        "userId": null,
+        "userType": "system",
+        "objectId": "6033f1f5d72347298d7b11c7",
+        "objectType": "conversation",
+        "client": "routing-worker",
+        "ip": null,
+        "changes": {
+          "attributes": {
+            "assignedUsers": {
+              "op": "replace",
+              "before": [],
+              "after": [
+                "5f2884b751e0530012e14301"
+              ]
+            }
+          },
+          "relationships": {}
+        },
+        "createdAt": "2021-02-24T15:29:34.675Z",
+        "publishedAt": "2021-02-24T15:29:33.825Z",
+        "expiresAt": "2021-05-25T15:29:34.675Z"
+      },
+      "relationships": {
+        "customer": {
+          "links": {
+            "self": "/v1/customers/601f1d6dd7c4f3a0664544cd"
+          },
+          "data": {
+            "type": "customer",
+            "id": "601f1d6dd7c4f3a0664544cd"
+          }
+        },
+        "user": {
+          "links": {
+            "self": "/v1/users/null"
+          },
+          "data": {
+            "type": "user",
+            "id": null
+          }
+        }
+      },
+      "publishedAt": "2021-02-24T15:29:33.825Z",
+      "createdAt": "2021-02-24T15:29:34.675Z",
+      "expiresAt": "2021-05-25T15:29:34.675Z",
+      "originalIndex": 4
+    },
+    {
+      "type": "audit_log",
+      "id": "603670dd78026d001995f685",
+      "attributes": {
+        "eventName": "kustomer.work-item.update",
+        "eventVerb": "update",
+        "org": "5bc5de5b5f2b2a001142dfa0",
+        "userId": "5f2884b751e0530012e14301",
+        "userType": "user",
+        "objectId": "6033f1f7bd3ebb00197360a1",
+        "objectType": "work_item",
+        "client": "api",
+        "ip": null,
+        "changes": {
+          "attributes": {
+            "status": {
+              "op": "replace",
+              "before": "routed",
+              "after": "assigned"
+            }
+          },
+          "relationships": {
+            "acceptedBy": {
+              "op": "add",
+              "before": null,
+              "after": "5f2884b751e0530012e14301"
+            },
+            "assignedTo": {
+              "op": "add",
+              "before": null,
+              "after": "5f2884b751e0530012e14301"
+            },
+            "team": {
+              "op": "add",
+              "before": null,
+              "after": "5efa0cf559926700196b95c5"
+            }
+          }
+        },
+        "createdAt": "2021-02-24T15:29:34.592Z",
+        "publishedAt": "2021-02-24T15:29:33.344Z",
+        "expiresAt": "2021-05-25T15:29:34.592Z"
+      },
+      "relationships": {
+        "conversation": {
+          "links": {
+            "self": "/v1/conversations/6033f1f5d72347298d7b11c7"
+          },
+          "data": {
+            "type": "conversation",
+            "id": "6033f1f5d72347298d7b11c7"
+          }
+        },
+        "user": {
+          "links": {
+            "self": "/v1/users/5f2884b751e0530012e14301"
+          },
+          "data": {
+            "type": "user",
+            "id": "5f2884b751e0530012e14301"
+          }
+        }
+      },
+      "publishedAt": "2021-02-24T15:29:33.344Z",
+      "createdAt": "2021-02-24T15:29:34.592Z",
+      "expiresAt": "2021-05-25T15:29:34.592Z",
+      "originalIndex": 5
+    },
+    {
+      "type": "audit_log",
+      "id": "603670dbbe3464001a23c458",
+      "attributes": {
+        "eventName": "kustomer.work-item.update",
+        "eventVerb": "update",
+        "org": "5bc5de5b5f2b2a001142dfa0",
+        "userId": null,
+        "userType": "system",
+        "objectId": "6033f1f7bd3ebb00197360a1",
+        "objectType": "work_item",
+        "client": "routing-worker",
+        "ip": null,
+        "changes": {
+          "attributes": {
+            "status": {
+              "op": "replace",
+              "before": "queued",
+              "after": "routed"
+            }
+          },
+          "relationships": {}
+        },
+        "createdAt": "2021-02-24T15:29:32.377Z",
+        "publishedAt": "2021-02-24T15:29:31.707Z",
+        "expiresAt": "2021-05-25T15:29:32.377Z"
+      },
+      "relationships": {
+        "conversation": {
+          "links": {
+            "self": "/v1/conversations/6033f1f5d72347298d7b11c7"
+          },
+          "data": {
+            "type": "conversation",
+            "id": "6033f1f5d72347298d7b11c7"
+          }
+        },
+        "user": {
+          "links": {
+            "self": "/v1/users/null"
+          },
+          "data": {
+            "type": "user",
+            "id": null
+          }
+        }
+      },
+      "publishedAt": "2021-02-24T15:29:31.707Z",
+      "createdAt": "2021-02-24T15:29:32.377Z",
+      "expiresAt": "2021-05-25T15:29:32.377Z",
+      "originalIndex": 6
+    },
+    {
+      "type": "audit_log",
+      "id": "6035437ac813cd004221fded",
+      "attributes": {
+        "eventName": "kustomer.conversation.sla.breached",
+        "eventVerb": "sla",
+        "org": "5bc5de5b5f2b2a001142dfa0",
+        "userId": null,
+        "userType": "user",
+        "objectId": "6033f1f5d72347298d7b11c7",
+        "objectType": "conversation",
+        "client": null,
+        "ip": null,
+        "changes": {
+          "attributes": {
+            "breachedMetric": {
+              "before": null,
+              "after": "firstResponse"
+            },
+            "breached": {
+              "before": false,
+              "after": true
+            },
+            "sla": {
+              "before": "5ca3be5ee26deb001b066c8d",
+              "after": "5ca3be5ee26deb001b066c8d"
+            }
+          },
+          "relationships": {}
+        },
+        "createdAt": "2021-02-23T18:03:38.593Z",
+        "publishedAt": "2021-02-23T18:03:38.593Z",
+        "expiresAt": "2022-02-23T18:03:38.593Z"
+      },
+      "relationships": {
+        "customer": {
+          "links": {
+            "self": "/v1/customers/601f1d6dd7c4f3a0664544cd"
+          },
+          "data": {
+            "type": "customer",
+            "id": "601f1d6dd7c4f3a0664544cd"
+          }
+        },
+        "user": {
+          "links": {
+            "self": "/v1/users/null"
+          },
+          "data": {
+            "type": "user",
+            "id": null
+          }
+        }
+      },
+      "publishedAt": "2021-02-23T18:03:38.593Z",
+      "createdAt": "2021-02-23T18:03:38.593Z",
+      "expiresAt": "2022-02-23T18:03:38.593Z",
+      "originalIndex": 7
+    },
+    {
+      "type": "audit_log",
+      "id": "60351f37041c2a0019e0f9f8",
+      "attributes": {
+        "eventName": "kustomer.work-item.update",
+        "eventVerb": "update",
+        "org": "5bc5de5b5f2b2a001142dfa0",
+        "userId": null,
+        "userType": "system",
+        "objectId": "6033f1f7bd3ebb00197360a1",
+        "objectType": "work_item",
+        "client": "routing-worker",
+        "ip": null,
+        "changes": {
+          "attributes": {},
+          "relationships": {
+            "queue": {
+              "op": "replace",
+              "before": "5bc5de5b9967d6001c44fdbc",
+              "after": "5ef644b4d78971001a892b16"
+            }
+          }
+        },
+        "createdAt": "2021-02-23T15:28:56.508Z",
+        "publishedAt": "2021-02-23T15:28:55.972Z",
+        "expiresAt": "2021-05-24T15:28:56.508Z"
+      },
+      "relationships": {
+        "conversation": {
+          "links": {
+            "self": "/v1/conversations/6033f1f5d72347298d7b11c7"
+          },
+          "data": {
+            "type": "conversation",
+            "id": "6033f1f5d72347298d7b11c7"
+          }
+        },
+        "user": {
+          "links": {
+            "self": "/v1/users/null"
+          },
+          "data": {
+            "type": "user",
+            "id": null
+          }
+        }
+      },
+      "publishedAt": "2021-02-23T15:28:55.972Z",
+      "createdAt": "2021-02-23T15:28:56.508Z",
+      "expiresAt": "2021-05-24T15:28:56.508Z",
+      "originalIndex": 9
+    },
+    {
+      "type": "audit_log",
+      "id": "60351f37834e7f768b2f31f3",
+      "attributes": {
+        "eventName": "kustomer.conversation.update",
+        "eventVerb": "update",
+        "org": "5bc5de5b5f2b2a001142dfa0",
+        "userId": "5bd74686c27bd5001dd0c29d",
+        "userType": "user",
+        "objectId": "6033f1f5d72347298d7b11c7",
+        "objectType": "conversation",
+        "client": "api",
+        "ip": null,
+        "changes": {
+          "attributes": {},
+          "relationships": {
+            "queue": {
+              "op": "replace",
+              "before": "5bc5de5b9967d6001c44fdbc",
+              "after": "5ef644b4d78971001a892b16"
+            }
+          }
+        },
+        "createdAt": "2021-02-23T15:28:56.354Z",
+        "publishedAt": "2021-02-23T15:28:55.731Z",
+        "expiresAt": "2021-05-24T15:28:56.354Z"
+      },
+      "relationships": {
+        "customer": {
+          "links": {
+            "self": "/v1/customers/601f1d6dd7c4f3a0664544cd"
+          },
+          "data": {
+            "type": "customer",
+            "id": "601f1d6dd7c4f3a0664544cd"
+          }
+        },
+        "user": {
+          "links": {
+            "self": "/v1/users/5bd74686c27bd5001dd0c29d"
+          },
+          "data": {
+            "type": "user",
+            "id": "5bd74686c27bd5001dd0c29d"
+          }
+        }
+      },
+      "publishedAt": "2021-02-23T15:28:55.731Z",
+      "createdAt": "2021-02-23T15:28:56.354Z",
+      "expiresAt": "2021-05-24T15:28:56.354Z",
+      "originalIndex": 8
+    },
+    {
+      "type": "audit_log",
+      "id": "6033f1f9402efae50b765602",
+      "attributes": {
+        "eventName": "kustomer.conversation.update",
+        "eventVerb": "update",
+        "org": "5bc5de5b5f2b2a001142dfa0",
+        "userId": null,
+        "userType": "system",
+        "objectId": "6033f1f5d72347298d7b11c7",
+        "objectType": "conversation",
+        "client": "routing-worker",
+        "ip": null,
+        "changes": {
+          "attributes": {},
+          "relationships": {
+            "queue": {
+              "op": "add",
+              "before": null,
+              "after": "5bc5de5b9967d6001c44fdbc"
+            }
+          }
+        },
+        "createdAt": "2021-02-22T18:03:37.909Z",
+        "publishedAt": "2021-02-22T18:03:37.618Z",
+        "expiresAt": "2021-05-23T18:03:37.909Z"
+      },
+      "relationships": {
+        "customer": {
+          "links": {
+            "self": "/v1/customers/601f1d6dd7c4f3a0664544cd"
+          },
+          "data": {
+            "type": "customer",
+            "id": "601f1d6dd7c4f3a0664544cd"
+          }
+        },
+        "user": {
+          "links": {
+            "self": "/v1/users/null"
+          },
+          "data": {
+            "type": "user",
+            "id": null
+          }
+        }
+      },
+      "publishedAt": "2021-02-22T18:03:37.618Z",
+      "createdAt": "2021-02-22T18:03:37.909Z",
+      "expiresAt": "2021-05-23T18:03:37.909Z",
+      "originalIndex": 12
+    },
+    {
+      "type": "audit_log",
+      "id": "6033f1f9ad78b5001a89e6fc",
+      "attributes": {
+        "eventName": "kustomer.work-item.update",
+        "eventVerb": "update",
+        "org": "5bc5de5b5f2b2a001142dfa0",
+        "userId": null,
+        "userType": "system",
+        "objectId": "6033f1f7bd3ebb00197360a1",
+        "objectType": "work_item",
+        "client": "routing-worker",
+        "ip": null,
+        "changes": {
+          "attributes": {
+            "status": {
+              "op": "replace",
+              "before": "ivr",
+              "after": "queued"
+            }
+          },
+          "relationships": {
+            "queue": {
+              "op": "add",
+              "before": null,
+              "after": "5bc5de5b9967d6001c44fdbc"
+            }
+          }
+        },
+        "createdAt": "2021-02-22T18:03:37.873Z",
+        "publishedAt": "2021-02-22T18:03:37.317Z",
+        "expiresAt": "2021-05-23T18:03:37.873Z"
+      },
+      "relationships": {
+        "conversation": {
+          "links": {
+            "self": "/v1/conversations/6033f1f5d72347298d7b11c7"
+          },
+          "data": {
+            "type": "conversation",
+            "id": "6033f1f5d72347298d7b11c7"
+          }
+        },
+        "user": {
+          "links": {
+            "self": "/v1/users/null"
+          },
+          "data": {
+            "type": "user",
+            "id": null
+          }
+        }
+      },
+      "publishedAt": "2021-02-22T18:03:37.317Z",
+      "createdAt": "2021-02-22T18:03:37.873Z",
+      "expiresAt": "2021-05-23T18:03:37.873Z",
+      "originalIndex": 11
+    },
+    {
+      "type": "audit_log",
+      "id": "6033f1f9ca47b64b963e1779",
+      "attributes": {
+        "eventName": "kustomer.conversation.update",
+        "eventVerb": "update",
+        "org": "5bc5de5b5f2b2a001142dfa0",
+        "userId": null,
+        "userType": "system",
+        "objectId": "6033f1f5d72347298d7b11c7",
+        "objectType": "conversation",
+        "client": "biz-rules-worker",
+        "ip": null,
+        "changes": {
+          "attributes": {
+            "custom": {
+              "op": "replace",
+              "before": {
+                "estimatedBillDateAt": "2021-03-04T14:30:00.000Z",
+                "lastBillDateAt": "2021-02-06T23:03:30.000Z"
+              },
+              "after": {
+                "estimatedBillDateAt": "2021-03-04T14:30:00.000Z",
+                "lastBillDateAt": "2021-02-06T23:03:30.000Z",
+                "contactReasonsTree": "account_subscription.billing1"
+              }
+            }
+          },
+          "relationships": {
+            "queue": {
+              "op": "remove",
+              "before": "5bc5de5b9967d6001c44fdbc",
+              "after": null
+            }
+          }
+        },
+        "createdAt": "2021-02-22T18:03:38.392Z",
+        "publishedAt": "2021-02-22T18:03:37.283Z",
+        "expiresAt": "2021-05-23T18:03:38.392Z"
+      },
+      "relationships": {
+        "customer": {
+          "links": {
+            "self": "/v1/customers/601f1d6dd7c4f3a0664544cd"
+          },
+          "data": {
+            "type": "customer",
+            "id": "601f1d6dd7c4f3a0664544cd"
+          }
+        },
+        "user": {
+          "links": {
+            "self": "/v1/users/null"
+          },
+          "data": {
+            "type": "user",
+            "id": null
+          }
+        }
+      },
+      "publishedAt": "2021-02-22T18:03:37.283Z",
+      "createdAt": "2021-02-22T18:03:38.392Z",
+      "expiresAt": "2021-05-23T18:03:38.392Z",
+      "originalIndex": 10
+    },
+    {
+      "type": "audit_log",
+      "id": "6033f1f8d36bdd00196d3712",
+      "attributes": {
+        "eventName": "kustomer.work-item.update",
+        "eventVerb": "update",
+        "org": "5bc5de5b5f2b2a001142dfa0",
+        "userId": null,
+        "userType": "system",
+        "objectId": "6033f1f7bd3ebb00197360a1",
+        "objectType": "work_item",
+        "client": "biz-rules-worker",
+        "ip": null,
+        "changes": {
+          "attributes": {
+            "status": {
+              "op": "replace",
+              "before": "queued",
+              "after": "ivr"
+            }
+          },
+          "relationships": {
+            "queue": {
+              "op": "remove",
+              "before": "5bc5de5b9967d6001c44fdbc",
+              "after": null
+            }
+          }
+        },
+        "createdAt": "2021-02-22T18:03:38.071Z",
+        "publishedAt": "2021-02-22T18:03:36.984Z",
+        "expiresAt": "2021-05-23T18:03:38.071Z"
+      },
+      "relationships": {
+        "conversation": {
+          "links": {
+            "self": "/v1/conversations/6033f1f5d72347298d7b11c7"
+          },
+          "data": {
+            "type": "conversation",
+            "id": "6033f1f5d72347298d7b11c7"
+          }
+        },
+        "user": {
+          "links": {
+            "self": "/v1/users/null"
+          },
+          "data": {
+            "type": "user",
+            "id": null
+          }
+        }
+      },
+      "publishedAt": "2021-02-22T18:03:36.984Z",
+      "createdAt": "2021-02-22T18:03:38.071Z",
+      "expiresAt": "2021-05-23T18:03:38.071Z",
+      "originalIndex": 13
+    },
+    {
+      "type": "audit_log",
+      "id": "6033f1f8c71f691be38d2d84",
+      "attributes": {
+        "eventName": "kustomer.conversation.update",
+        "eventVerb": "update",
+        "org": "5bc5de5b5f2b2a001142dfa0",
+        "userId": null,
+        "userType": "system",
+        "objectId": "6033f1f5d72347298d7b11c7",
+        "objectType": "conversation",
+        "client": "routing-worker",
+        "ip": null,
+        "changes": {
+          "attributes": {},
+          "relationships": {
+            "queue": {
+              "op": "add",
+              "before": null,
+              "after": "5bc5de5b9967d6001c44fdbc"
+            }
+          }
+        },
+        "createdAt": "2021-02-22T18:03:37.310Z",
+        "publishedAt": "2021-02-22T18:03:36.670Z",
+        "expiresAt": "2021-05-23T18:03:37.310Z"
+      },
+      "relationships": {
+        "customer": {
+          "links": {
+            "self": "/v1/customers/601f1d6dd7c4f3a0664544cd"
+          },
+          "data": {
+            "type": "customer",
+            "id": "601f1d6dd7c4f3a0664544cd"
+          }
+        },
+        "user": {
+          "links": {
+            "self": "/v1/users/null"
+          },
+          "data": {
+            "type": "user",
+            "id": null
+          }
+        }
+      },
+      "publishedAt": "2021-02-22T18:03:36.670Z",
+      "createdAt": "2021-02-22T18:03:37.310Z",
+      "expiresAt": "2021-05-23T18:03:37.310Z",
+      "originalIndex": 14
+    },
+    {
+      "type": "audit_log",
+      "id": "6033f1f874ea620019ecf080",
+      "attributes": {
+        "eventName": "kustomer.work-item.update",
+        "eventVerb": "update",
+        "org": "5bc5de5b5f2b2a001142dfa0",
+        "userId": null,
+        "userType": "system",
+        "objectId": "6033f1f7bd3ebb00197360a1",
+        "objectType": "work_item",
+        "client": "routing-worker",
+        "ip": null,
+        "changes": {
+          "attributes": {
+            "status": {
+              "op": "replace",
+              "before": "ivr",
+              "after": "queued"
+            },
+            "firstEnterQueueAt": {
+              "op": "add",
+              "before": null,
+              "after": "2021-02-22T18:03:36.284Z"
+            }
+          },
+          "relationships": {
+            "queue": {
+              "op": "add",
+              "before": null,
+              "after": "5bc5de5b9967d6001c44fdbc"
+            }
+          }
+        },
+        "createdAt": "2021-02-22T18:03:36.813Z",
+        "publishedAt": "2021-02-22T18:03:36.293Z",
+        "expiresAt": "2021-05-23T18:03:36.813Z"
+      },
+      "relationships": {
+        "conversation": {
+          "links": {
+            "self": "/v1/conversations/6033f1f5d72347298d7b11c7"
+          },
+          "data": {
+            "type": "conversation",
+            "id": "6033f1f5d72347298d7b11c7"
+          }
+        },
+        "user": {
+          "links": {
+            "self": "/v1/users/null"
+          },
+          "data": {
+            "type": "user",
+            "id": null
+          }
+        }
+      },
+      "publishedAt": "2021-02-22T18:03:36.293Z",
+      "createdAt": "2021-02-22T18:03:36.813Z",
+      "expiresAt": "2021-05-23T18:03:36.813Z",
+      "originalIndex": 15
+    },
+    {
+      "type": "audit_log",
+      "id": "6033f1f7bd3ebb00197360a4",
+      "attributes": {
+        "eventName": "kustomer.work-item.create",
+        "eventVerb": "create",
+        "org": "5bc5de5b5f2b2a001142dfa0",
+        "userId": null,
+        "userType": "user",
+        "objectId": "6033f1f7bd3ebb00197360a1",
+        "objectType": "work_item",
+        "client": null,
+        "ip": null,
+        "changes": null,
+        "createdAt": "2021-02-22T18:03:36.795Z",
+        "publishedAt": "2021-02-22T18:03:35.959Z",
+        "expiresAt": "2021-05-23T18:03:36.795Z"
+      },
+      "relationships": {
+        "conversation": {
+          "links": {
+            "self": "/v1/conversations/6033f1f5d72347298d7b11c7"
+          },
+          "data": {
+            "type": "conversation",
+            "id": "6033f1f5d72347298d7b11c7"
+          }
+        },
+        "user": {
+          "links": {
+            "self": "/v1/users/null"
+          },
+          "data": {
+            "type": "user",
+            "id": null
+          }
+        }
+      },
+      "publishedAt": "2021-02-22T18:03:35.959Z",
+      "createdAt": "2021-02-22T18:03:36.795Z",
+      "expiresAt": "2021-05-23T18:03:36.795Z",
+      "originalIndex": 16
+    },
+    {
+      "type": "audit_log",
+      "id": "6033f1f6b93b257bdb422eaf",
+      "attributes": {
+        "eventName": "kustomer.conversation.update",
+        "eventVerb": "update",
+        "org": "5bc5de5b5f2b2a001142dfa0",
+        "userId": "5bff249adb34a300118d08d1",
+        "userType": "user",
+        "objectId": "6033f1f5d72347298d7b11c7",
+        "objectType": "conversation",
+        "client": "api",
+        "ip": null,
+        "changes": {
+          "attributes": {
+            "ended": {
+              "op": "add",
+              "before": null,
+              "after": false
+            },
+            "custom": {
+              "op": "add",
+              "before": {},
+              "after": {
+                "estimatedBillDateAt": "2021-03-04T14:30:00.000Z",
+                "lastBillDateAt": "2021-02-06T23:03:30.000Z"
+              }
+            }
+          },
+          "relationships": {}
+        },
+        "createdAt": "2021-02-22T18:03:35.386Z",
+        "publishedAt": "2021-02-22T18:03:34.803Z",
+        "expiresAt": "2021-05-23T18:03:35.386Z"
+      },
+      "relationships": {
+        "customer": {
+          "links": {
+            "self": "/v1/customers/601f1d6dd7c4f3a0664544cd"
+          },
+          "data": {
+            "type": "customer",
+            "id": "601f1d6dd7c4f3a0664544cd"
+          }
+        },
+        "user": {
+          "links": {
+            "self": "/v1/users/5bff249adb34a300118d08d1"
+          },
+          "data": {
+            "type": "user",
+            "id": "5bff249adb34a300118d08d1"
+          }
+        }
+      },
+      "publishedAt": "2021-02-22T18:03:34.803Z",
+      "createdAt": "2021-02-22T18:03:35.386Z",
+      "expiresAt": "2021-05-23T18:03:35.386Z",
+      "originalIndex": 17
+    },
+    {
+      "type": "audit_log",
+      "id": "6033f1f59de113717ceb2fbe",
+      "attributes": {
+        "eventName": "kustomer.message.create",
+        "eventVerb": "create",
+        "org": "5bc5de5b5f2b2a001142dfa0",
+        "userId": "5bc5de5cbb3116001b355c31",
+        "userType": "workflow",
+        "objectId": "6033f1f5a1d74e7e6966424d",
+        "objectType": "message",
+        "client": "workflow",
+        "ip": null,
+        "changes": null,
+        "createdAt": "2021-02-22T18:03:34.192Z",
+        "publishedAt": "2021-02-22T18:03:33.814Z",
+        "expiresAt": "2022-02-22T18:03:34.192Z"
+      },
+      "relationships": {
+        "customer": {
+          "links": {
+            "self": "/v1/customers/601f1d6dd7c4f3a0664544cd"
+          },
+          "data": {
+            "type": "customer",
+            "id": "601f1d6dd7c4f3a0664544cd"
+          }
+        },
+        "conversation": {
+          "links": {
+            "self": "/v1/conversations/6033f1f5d72347298d7b11c7"
+          },
+          "data": {
+            "type": "conversation",
+            "id": "6033f1f5d72347298d7b11c7"
+          }
+        },
+        "user": {
+          "links": {
+            "self": "/v1/users/5bc5de5cbb3116001b355c31"
+          },
+          "data": {
+            "type": "user",
+            "id": "5bc5de5cbb3116001b355c31"
+          }
+        }
+      },
+      "publishedAt": "2021-02-22T18:03:33.814Z",
+      "createdAt": "2021-02-22T18:03:34.192Z",
+      "expiresAt": "2022-02-22T18:03:34.192Z",
+      "originalIndex": 18
+    }
+  ]
+  
