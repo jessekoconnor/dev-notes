@@ -1,0 +1,718 @@
+# Investigate reverse sync of De-Queue
+
+
+## Reverse sync under investigation
+
+```json
+{
+  "name": "routing-worker",
+  "hostname": "439b863922bd",
+  "pid": 1,
+  "level": 30,
+  "event": {},
+  "obj": {},
+  "conversationId": "621fc1d36a39b4aa389cb72b",
+  "workItemId": "621fc1d5cb4ca800935aa935",
+  "updatedConversation": {
+    "assignedUsers": [],
+    "rev": 6
+  },
+  "msg": "CONVERSATION_SYNC_AUDIT",
+  "time": "2022-03-02T19:13:26.510Z",
+  "v": 0,
+  "dd": {
+    "trace_id": "728527378439499336",
+    "span_id": "728527378439499336",
+    "service": "routing-worker",
+    "version": "release-v0.1.147"
+}
+```
+
+## WORK_ITEM revs
+
+### Work Item Rev 2
+
+* Queue Rules Hit
+* No assignedUsers changes
+* The update worn the race condition forward and reverse syncing in regards to assignment
+
+```json
+{
+   "name":"event",
+   "hostname":"bff26c6a122d",
+   "pid":1,
+   "level":30,
+   "fullBodyLength":2743,
+   "body":{
+      "id":"621fc1d602c24482cc87453c",
+      "name":"kustomer.work-item.update",
+      "partition":"5c093c1abd6d1c00124a36b2",
+      "body":{
+         "id":"621fc1d602c244191d87453b",
+         "name":"kustomer.work-item.update",
+         "org":"5c093c1abd6d1c00124a36b2",
+         "partition":"5c093c1abd6d1c00124a36b2",
+         "data":{
+            "id":"621fc1d5cb4ca800935aa935",
+            "type":"work_item",
+            "attributes":{
+               "resourceType":"conversation",
+               "status":"queued",
+               "paused":false,
+               "channel":"voice",
+               "firstEnterQueueAt":"2022-03-02T19:13:26.158Z",
+               "queuedCount":1,
+               "priority":1,
+               "itemSize":1,
+               "ivr":{
+                  "businessTime":0,
+                  "time":0
+               },
+               "updatedAt":"2022-03-02T19:13:26.158Z",
+               "modifiedAt":"2022-03-02T19:13:25.832Z",
+               "createdAt":"2022-03-02T19:13:25.827Z",
+               "resourceRev":4,
+               "resourceCreatedAt":"2022-03-02T19:13:23.286Z",
+               "resourceDirection":"out",
+               "rev":2,
+               "workItemNumber":1,
+               "lastRevision":{
+                  "enteredQueueAt":"2022-03-02T19:13:26.158Z"
+               }
+            },
+            "relationships":{
+               "org":{
+                  "data":{
+                     "type":"org",
+                     "id":"5c093c1abd6d1c00124a36b2"
+                  },
+                  "links":{
+                     "self":"/v1/orgs/5c093c1abd6d1c00124a36b2"
+                  }
+               },
+               "resource":{
+                  "data":{
+                     "type":"conversation",
+                     "id":"621fc1d36a39b4aa389cb72b"
+                  }
+               },
+               "lastRevision":{
+                  "data":{
+                     "type":"work_item_revision",
+                     "id":"621fc1d5cb4ca8a1e75aa936"
+                  }
+               },
+               "queue":{
+                  "data":{
+                     "type":"queue",
+                     "id":"5dea5f45c6a646001a621475"
+                  },
+                  "links":{
+                     "self":"/v1/routing/queues/5dea5f45c6a646001a621475"
+                  }
+               },
+               "rule":{
+                  "data":{
+                     "type":"queue-rule",
+                     "id":"5dea5f66f2a0ba0019fa5c86"
+                  },
+                  "links":{
+                     "self":"/v1/routing/queue-rules/5dea5f66f2a0ba0019fa5c86"
+                  }
+               }
+            },
+            "links":{
+               "self":"/v1/routing/work-items/621fc1d5cb4ca800935aa935"
+            }
+         },
+         "createdAt":"2022-03-02T19:13:26.167Z",
+         "changes":{
+            "attributes":{
+               "status":{
+                  "op":"replace",
+                  "before":"ivr",
+                  "after":"queued"
+               },
+               "firstEnterQueueAt":{
+                  "op":"add",
+                  "after":"2022-03-02T19:13:26.158Z"
+               },
+               "queuedCount":{
+                  "op":"replace",
+                  "before":0,
+                  "after":1
+               },
+               "ivr":{
+                  "op":"add",
+                  "after":{
+                     "businessTime":0,
+                     "time":0
+                  }
+               },
+               "updatedAt":{
+                  "op":"replace",
+                  "before":"2022-03-02T19:13:25.832Z",
+                  "after":"2022-03-02T19:13:26.158Z"
+               },
+               "rev":{
+                  "op":"replace",
+                  "before":1,
+                  "after":2
+               },
+               "lastRevision":{
+                  "op":"add",
+                  "before":null,
+                  "after":{
+                     "enteredQueueAt":"2022-03-02T19:13:26.158Z"
+                  }
+               }
+            },
+            "relationships":{
+               "queue":{
+                  "op":"add",
+                  "before":null,
+                  "after":{
+                     "data":{
+                        "type":"queue",
+                        "id":"5dea5f45c6a646001a621475"
+                     },
+                     "links":{
+                        "self":"/v1/routing/queues/5dea5f45c6a646001a621475"
+                     }
+                  }
+               },
+               "rule":{
+                  "op":"add",
+                  "before":null,
+                  "after":{
+                     "data":{
+                        "type":"queue-rule",
+                        "id":"5dea5f66f2a0ba0019fa5c86"
+                     },
+                     "links":{
+                        "self":"/v1/routing/queue-rules/5dea5f66f2a0ba0019fa5c86"
+                     }
+                  }
+               }
+            }
+         },
+         "client":"routing-worker",
+         "isSync":false,
+         "routingReasons":{
+            "meta":{
+               "conversationRev":4
+            },
+            "action":"QUEUE_WORK_ITEM",
+            "code":"QUEUE_RULES_HIT"
+         },
+         {
+            "meta":{
+               "data":{
+                  "queue":{
+                     "id":"5dea5f45c6a646001a621475",
+                     "rule":"5dea5f66f2a0ba0019fa5c86"
+                  },
+                  "rev":1
+               },
+               "commandName":"queueCommandParams"
+            },
+            "action":"UPDATE_COMMAND",
+            "code":"WORK_ITEM_UPDATE_CMD"
+         }
+      },
+      "publishedAt":"2022-03-02T19:13:26.168Z",
+      "version":3
+   },
+   "producer":"SNSEventProducer",
+   "msg":"",
+   "time":"2022-03-02T19:13:26.168Z",
+   "v":0,
+   "dd":{
+      "trace_id":"8537697789045891976",
+      "span_id":"4029227218913872762",
+      "service":"routing-api",
+      "version":"release-v0.1.210"
+   }
+}
+```
+
+### Work Item Rev 1
+
+* AssignedTo: null
+
+```json
+{
+   "name":"event",
+   "hostname":"37a08f820475",
+   "pid":1,
+   "level":30,
+   "fullBodyLength":1158,
+   "body":{
+      "id":"621fc1d5cb4ca83af75aa93c",
+      "name":"kustomer.work-item.create",
+      "partition":"5c093c1abd6d1c00124a36b2",
+      "body":{
+         "id":"621fc1d5cb4ca8488e5aa93b",
+         "name":"kustomer.work-item.create",
+         "org":"5c093c1abd6d1c00124a36b2",
+         "partition":"5c093c1abd6d1c00124a36b2",
+         "data":{
+            "id":"621fc1d5cb4ca800935aa935",
+            "type":"work_item",
+            "attributes":{
+               "resourceType":"conversation",
+               "status":"ivr",
+               "paused":false,
+               "channel":"voice",
+               "queuedCount":0,
+               "priority":1,
+               "itemSize":1,
+               "updatedAt":"2022-03-02T19:13:25.832Z",
+               "modifiedAt":"2022-03-02T19:13:25.832Z",
+               "createdAt":"2022-03-02T19:13:25.827Z",
+               "resourceRev":4,
+               "resourceCreatedAt":"2022-03-02T19:13:23.286Z",
+               "resourceDirection":"out",
+               "rev":1,
+               "workItemNumber":1
+            },
+            "relationships":{
+               "org":{
+                  "data":{
+                     "type":"org",
+                     "id":"5c093c1abd6d1c00124a36b2"
+                  },
+                  "links":{
+                     "self":"/v1/orgs/5c093c1abd6d1c00124a36b2"
+                  }
+               },
+               "resource":{
+                  "data":{
+                     "type":"conversation",
+                     "id":"621fc1d36a39b4aa389cb72b"
+                  }
+               },
+               "lastRevision":{
+                  "data":{
+                     "type":"work_item_revision",
+                     "id":"621fc1d5cb4ca8a1e75aa936"
+                  }
+               }
+            },
+            "links":{
+               "self":"/v1/routing/work-items/621fc1d5cb4ca800935aa935"
+            }
+         },
+         "createdAt":"2022-03-02T19:13:25.835Z",
+         "routingReasons":
+      },
+      "publishedAt":"2022-03-02T19:13:25.835Z",
+      "version":3
+   },
+   "producer":"SNSEventProducer",
+   "msg":"",
+   "time":"2022-03-02T19:13:25.835Z",
+   "v":0,
+   "dd":{
+      "trace_id":"6938909321752945810",
+      "span_id":"2886485573899963115",
+      "service":"routing-api",
+      "version":"release-v0.1.210"
+   }
+}
+```
+
+## CONVERSATION revs
+
+### Convo rev 7
+
+* AssignedUsers: []
+  * before 61a6a83fdf1e2d21501a77c1
+* Client: reverse sync
+
+```json
+{
+   "level":30,
+   "time":1646248406490,
+   "pid":1,
+   "hostname":"b37c344773cd",
+   "name":"event",
+   "dd":{
+      "trace_id":"728527378439499336",
+      "span_id":"4924795945931102200",
+      "service":"sobjects",
+      "version":"release-v0.1.912"
+   },
+   "fullBodyLength":2933,
+   "body":{
+      "id":"621fc1d631cd0f17e838e7b9",
+      "name":"kustomer.conversation.update",
+      "partition":"5c093c1abd6d1c00124a36b2",
+      "body":{
+         "id":"621fc1d672ec4b086d4de052",
+         "name":"kustomer.conversation.update",
+         "org":"5c093c1abd6d1c00124a36b2",
+         "partition":"5c093c1abd6d1c00124a36b2",
+         "data":{
+            "type":"conversation",
+            "id":"621fc1d36a39b4aa389cb72b",
+            "attributes":{
+               "externalId":"CA2e050b9e3e1a765920369dc088dcdb3d",
+               "name":"Outbound call - +13034440407",
+               "preview":"",
+               "channels":"voice",
+               "status":"open",
+               "messageCount":1,
+               "noteCount":0,
+               "satisfaction":0,
+               "satisfactionLevel":{
+                  "sentByTeams":,
+                  "answers":
+               },
+               "createdAt":"2022-03-02T19:13:23.286Z",
+               "updatedAt":"2022-03-02T19:13:26.486Z",
+               "lastActivityAt":"2022-03-02T19:13:24.105Z",
+               "spam":false,
+               "ended":false,
+               "tags":,
+               "suggestedTags":,
+               "predictions":,
+               "suggestedShortcuts":,
+               "firstMessageOut":{
+                  "createdByTeams":null,
+                  "id":"9de03e2de91a36a461c0ba23",
+                  "sentAt":"2022-03-02T19:13:22.415Z",
+                  "createdAt":"2022-03-02T19:13:23.405Z",
+                  "channel":"voice",
+                  "directionType":"initial-out",
+                  "createdBy":null
+               },
+               "lastMessageOut":{
+                  "id":"9de03e2de91a36a461c0ba23",
+                  "sentAt":"2022-03-02T19:13:22.415Z",
+                  "createdAt":"2022-03-02T19:13:23.405Z"
+               },
+               "lastMessageAt":"2022-03-02T19:13:22.415Z",
+               "assignedUsers":,
+               "assignedTeams":,
+               "firstResponse":{
+                  "createdByTeams":,
+                  "assignedTeams":,
+                  "assignedUsers":
+               },
+               "firstResponseSinceLastDone":{
+                  "createdByTeams":,
+                  "assignedTeams":,
+                  "assignedUsers":
+               },
+               "lastResponse":{
+                  "createdByTeams":,
+                  "assignedTeams":,
+                  "assignedUsers":
+               },
+               "firstDone":{
+                  "createdByTeams":,
+                  "assignedTeams":,
+                  "assignedUsers":
+               },
+               "lastDone":{
+                  "createdByTeams":,
+                  "assignedTeams":,
+                  "assignedUsers":
+               },
+               "direction":"out",
+               "custom":{
+                  "fcrBool":true
+               },
+               "lastMessageDirection":"out",
+               "outboundMessageCount":1,
+               "inboundMessageCount":0,
+               "rev":7,
+               "priority":3,
+               "roleGroupVersions":,
+               "accessOverride":,
+               "assistant":{
+                  "fac":{
+                     "reasons":
+                  },
+                  "assistantId":
+               },
+               "phase":"active"
+            },
+            "relationships":{
+               "messages":{
+                  "links":{
+                     "self":"/v1/conversations/621fc1d36a39b4aa389cb72b/messages"
+                  }
+               },
+               "org":{
+                  "links":{
+                     "self":"/v1/orgs/5c093c1abd6d1c00124a36b2"
+                  },
+                  "data":{
+                     "type":"org",
+                     "id":"5c093c1abd6d1c00124a36b2"
+                  }
+               },
+               "customer":{
+                  "data":{
+                     "type":"customer",
+                     "id":"5f8b1a61c79c284b85ef373c"
+                  },
+                  "links":{
+                     "self":"/v1/customers/5f8b1a61c79c284b85ef373c"
+                  }
+               },
+               "queue":{
+                  "data":{
+                     "type":"queue",
+                     "id":"5dea5f45c6a646001a621475"
+                  },
+                  "links":{
+                     "self":"/v1/routing/queues/5dea5f45c6a646001a621475"
+                  }
+               },
+               "brand":{
+                  "data":{
+                     "type":"brand",
+                     "id":"5daf78e8124be4f2960caac6"
+                  },
+                  "links":{
+                     "self":"/v1/brands/5daf78e8124be4f2960caac6"
+                  }
+               }
+            },
+            "links":{
+               "self":"/v1/conversations/621fc1d36a39b4aa389cb72b"
+            }
+         },
+         "createdAt":"2022-03-02T19:13:26.490Z",
+         "changes":{
+            "attributes":{
+               "updatedAt":{
+                  "op":"replace",
+                  "before":"2022-03-02T19:13:26.381Z",
+                  "after":"2022-03-02T19:13:26.486Z"
+               },
+               "assignedUsers":{
+                  "op":"replace",
+                  "before":"61a6a83fdf1e2d21501a77c1",
+                  "after":
+               },
+               "rev":{
+                  "op":"replace",
+                  "before":6,
+                  "after":7
+               }
+            },
+            "relationships":{
+               
+            }
+         },
+         "persist":true,
+         "isSync":true,
+         "client":"routing-worker"
+      },
+      "publishedAt":"2022-03-02T19:13:26.490Z",
+      "version":3
+   },
+   "producer":"SNSEventProducer"
+}
+```
+
+### Convo rev 6
+
+* AssignedUsers: 61a6a83fdf1e2d21501a77c1
+  * before: []
+* Client: workflow
+
+```json
+{
+   "level":30,
+   "time":1646248406387,
+   "pid":1,
+   "hostname":"3f4427bc006c",
+   "name":"event",
+   "dd":{
+      "trace_id":"4400790063371993808",
+      "span_id":"2665877942154390372",
+      "service":"sobjects",
+      "version":"release-v0.1.912"
+   },
+   "fullBodyLength":3001,
+   "body":{
+      "id":"621fc1d69ffa5c10f9b2969d",
+      "name":"kustomer.conversation.update",
+      "partition":"5c093c1abd6d1c00124a36b2",
+      "body":{
+         "id":"621fc1d671dbd57b687f8c4e",
+         "name":"kustomer.conversation.update",
+         "org":"5c093c1abd6d1c00124a36b2",
+         "partition":"5c093c1abd6d1c00124a36b2",
+         "data":{
+            "type":"conversation",
+            "id":"621fc1d36a39b4aa389cb72b",
+            "attributes":{
+               "externalId":"CA2e050b9e3e1a765920369dc088dcdb3d",
+               "name":"Outbound call - +13034440407",
+               "preview":"",
+               "channels":"voice",
+               "status":"open",
+               "messageCount":1,
+               "noteCount":0,
+               "satisfaction":0,
+               "satisfactionLevel":{
+                  "sentByTeams":,
+                  "answers":
+               },
+               "createdAt":"2022-03-02T19:13:23.286Z",
+               "updatedAt":"2022-03-02T19:13:26.381Z",
+               "lastActivityAt":"2022-03-02T19:13:24.105Z",
+               "spam":false,
+               "ended":false,
+               "tags":,
+               "suggestedTags":,
+               "predictions":,
+               "suggestedShortcuts":,
+               "firstMessageOut":{
+                  "createdByTeams":null,
+                  "id":"9de03e2de91a36a461c0ba23",
+                  "sentAt":"2022-03-02T19:13:22.415Z",
+                  "createdAt":"2022-03-02T19:13:23.405Z",
+                  "channel":"voice",
+                  "directionType":"initial-out",
+                  "createdBy":null
+               },
+               "lastMessageOut":{
+                  "id":"9de03e2de91a36a461c0ba23",
+                  "sentAt":"2022-03-02T19:13:22.415Z",
+                  "createdAt":"2022-03-02T19:13:23.405Z"
+               },
+               "lastMessageAt":"2022-03-02T19:13:22.415Z",
+               "assignedUsers":"61a6a83fdf1e2d21501a77c1",
+               "assignedTeams":,
+               "firstResponse":{
+                  "createdByTeams":,
+                  "assignedTeams":,
+                  "assignedUsers":
+               },
+               "firstResponseSinceLastDone":{
+                  "createdByTeams":,
+                  "assignedTeams":,
+                  "assignedUsers":
+               },
+               "lastResponse":{
+                  "createdByTeams":,
+                  "assignedTeams":,
+                  "assignedUsers":
+               },
+               "firstDone":{
+                  "createdByTeams":,
+                  "assignedTeams":,
+                  "assignedUsers":
+               },
+               "lastDone":{
+                  "createdByTeams":,
+                  "assignedTeams":,
+                  "assignedUsers":
+               },
+               "direction":"out",
+               "custom":{
+                  "fcrBool":true
+               },
+               "lastMessageDirection":"out",
+               "outboundMessageCount":1,
+               "inboundMessageCount":0,
+               "rev":6,
+               "priority":3,
+               "roleGroupVersions":,
+               "accessOverride":,
+               "assistant":{
+                  "fac":{
+                     "reasons":
+                  },
+                  "assistantId":
+               },
+               "phase":"active"
+            },
+            "relationships":{
+               "messages":{
+                  "links":{
+                     "self":"/v1/conversations/621fc1d36a39b4aa389cb72b/messages"
+                  }
+               },
+               "org":{
+                  "links":{
+                     "self":"/v1/orgs/5c093c1abd6d1c00124a36b2"
+                  },
+                  "data":{
+                     "type":"org",
+                     "id":"5c093c1abd6d1c00124a36b2"
+                  }
+               },
+               "customer":{
+                  "data":{
+                     "type":"customer",
+                     "id":"5f8b1a61c79c284b85ef373c"
+                  },
+                  "links":{
+                     "self":"/v1/customers/5f8b1a61c79c284b85ef373c"
+                  }
+               },
+               "queue":{
+                  "data":{
+                     "type":"queue",
+                     "id":"5dea5f45c6a646001a621475"
+                  },
+                  "links":{
+                     "self":"/v1/routing/queues/5dea5f45c6a646001a621475"
+                  }
+               },
+               "brand":{
+                  "data":{
+                     "type":"brand",
+                     "id":"5daf78e8124be4f2960caac6"
+                  },
+                  "links":{
+                     "self":"/v1/brands/5daf78e8124be4f2960caac6"
+                  }
+               }
+            },
+            "links":{
+               "self":"/v1/conversations/621fc1d36a39b4aa389cb72b"
+            }
+         },
+         "createdAt":"2022-03-02T19:13:26.387Z",
+         "changes":{
+            "attributes":{
+               "updatedAt":{
+                  "op":"replace",
+                  "before":"2022-03-02T19:13:26.134Z",
+                  "after":"2022-03-02T19:13:26.381Z"
+               },
+               "assignedUsers":{
+                  "op":"replace",
+                  "before":,
+                  "after":"61a6a83fdf1e2d21501a77c1"
+               },
+               "rev":{
+                  "op":"replace",
+                  "before":5,
+                  "after":6
+               }
+            },
+            "relationships":{
+               
+            }
+         },
+         "persist":true,
+         "client":"workflow",
+         "sourceId":"60ff0f884538c70019739bb5",
+         "sourceType":"workflow"
+      },
+      "publishedAt":"2022-03-02T19:13:26.387Z",
+      "version":3
+   },
+   "producer":"SNSEventProducer"
+}
+```

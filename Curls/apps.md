@@ -21,7 +21,7 @@ curl -X POST "${LOCAL_API_URL}/v1/apps/available" \
   "app": "jessetest",
   "title": "jessetest",
   "iconUrl": "https://cdnapps.helpapp.io/scheduler/images/icon.png",
-  "version": "1.0.4",
+  "version": "1.0.1",
   "dependencies": [],
   "description": "Placeholder to unblock RWF Development.",
   "appDetails": {
@@ -91,12 +91,25 @@ curl -X POST "${LOCAL_API_URL}/v1/apps/available" \
 
 ## Force Install in LOCAL org
 
+Local:
+
 ```bash
 curl -X POST "${LOCAL_API_URL}/v1/apps" \
 -H "Authorization: Bearer ${LOCAL_OWNER_AUTH_TOKEN}" \
 -H 'content-type: application/json' \
 --data '{
   "app": "jessetest_6041403c1eeac59bc5ac8075", "version": "1.0.1"
+}' | jq
+```
+
+Staging:
+
+```bash
+curl -X POST "${STAGING_API_URL}/v1/apps" \
+-H "Authorization: Bearer ${STAGING_OWNER_AUTH_TOKEN}" \
+-H 'content-type: application/json' \
+--data '{
+  "app": "kustomer", "version": "1.8.19"
 }' | jq
 ```
 

@@ -4,7 +4,7 @@
 
 ```bash
 curl "${LOCAL_API_URL}/v1/users/current" \
--H "Authorization: Bearer ${LOCAL_OWNER_AUTH_TOKEN}" | jq
+-H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMzBkOWZiOThlMTYzMDI3ZmFkZmNjOSIsInVzZXIiOiI2MjMwZDlmYTRkYzUzYzc4YmQxNjNmMjAiLCJvcmciOiI2MDQxNDAzYzFlZWFjNTliYzVhYzgwNzUiLCJvcmdOYW1lIjoibG9jYWwtam9jb25ub3ItMDMtMDQtMjEtMSIsInVzZXJUeXBlIjoibWFjaGluZSIsInBvZCI6ImRldi1qZXNzZSIsInJvbGVzIjpbIm9yZyJdLCJhdWQiOiJ1cm46Y29uc3VtZXIiLCJpc3MiOiJ1cm46YXBpIiwic3ViIjoiNjIzMGQ5ZmE0ZGM1M2M3OGJkMTYzZjIwIn0.XlVPtVSN--i0DHs9LeSnD5egkJLyS9N0Hn1MxH1FfmI" | jq
 ```
 
 ## Creat a a user

@@ -14,6 +14,10 @@ and Java.
 Concurrency is the ability of different parts or units of a program, algorithm,
 or problem to be executed out-of-order or at the same time.
 
+[MIT CS department definition](https://web.mit.edu/6.005/www/fa14/classes/17-concurrency/)
+
+Concurrency means multiple computations are happening at the same time.
+
 This allows for parallel execution of the concurrent units, *which can
 significantly improve overall speed* of the execution in multi-processor and
 multi-core systems.
@@ -22,8 +26,9 @@ In more technical terms, concurrency refers to the decomposability of a program,
 algorithm, or problem into order-independent or partially-ordered components or
 units of computation.
 
-## Event loop
+goroutine
 
+## Event loop
 
 # Examples
 
@@ -99,3 +104,7 @@ Recursion:
   (https://stackoverflow.com/questions/20748061/what-is-the-default-stack-size-in-node-js)
 * Default heap size is 1400 megabytes
 * Since 1mb = 1000kb, the heap is ~1500 times larger than the stack
+
+Slides: 
+
+https://docs.google.com/presentation/d/12XKJo3ByKG6GKe3fAfMJ14TlXuKjzhBY5OhHDHM_bPs/edit#slide=id.gfd46864ffa_0_26
