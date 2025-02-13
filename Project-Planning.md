@@ -7,19 +7,16 @@ Some details and recomendations for how to plan out a large project, and keep yo
 For Stakeholders:
 
 * As a stakeholder have you ever felt like:
-  * You dont have any idea when your project will be complete
-  * Your project is a black hole of developer efforts
-  * You dont have a sense of the progress being made by your developers over weeks and months
-  * Your boss is demanding a progress update or due date and you dont know where to even start
+  * Your project will never reach completion somehow (black lagoon)
+  * Your feel like no progress is being made on project X
+  * Roadmaps feel impossible to plan, predictions are usually way off
 
 For developers:
 
 * As a developer have your ever felt like:
-  * Deadline misses are common
-  * Deadlines dont even exist
-  * Stakeholders are asking for updates and your not sure what to report
-  * Your sick of getting stressed out when executing a large project
-  * Your often double booked and are not able to accomplish what you were hoping
+  * You get stressed as a deadline approaches
+  * You did not partake in the deadline calculation, thus it was off from the beginning
+  * Your stakeholders frustrated and are not getting the transparancy they desire on project progress
 
 ## Pros and Cons
 
@@ -30,18 +27,28 @@ Advantages:
 * Detect deadline misses early and often
   * Deadline accuracy improves over time
   * Stress levels are reduced (especially as deadine approaches)
-* Project progress is public knowlege
-* Plan out the half/roadmap with higher accuracy
-* Creates urgency from day 1
+* Provide transparency on project progress 
+* Plan out the quarter/roadmap with higher accuracy
+* Creates developer urgency from day 1
 
 Disadvantages:
 
-* Probably overkill for a week long project 
-* Slightly annoying for a dev who is doing this for the first time
+* Probably overkill for:
+ * a single story
+ * a single bug
+* Slightly frontloaded, i.e. takes some effort to calculate deadline
   * Might take an hour or two during the first week
   * But should only take 20 mins per week once you get the hang of it
 
-## The Strategy
+## Generate an accurate deadline
+
+The strategy is simple:
+
+1) Task out the project
+2) Point each task, get total points
+3) Calcualte developer velocity
+4) Determine working days required
+5) Overlay onto the calandar
 
 ### Task out the project
 
@@ -83,7 +90,7 @@ Calculate average velocity based on previous 3 sprints
 
 Calculate how many business days are required to complete the project
 
-TotalProjectPoints / (developers * dailyDevPoints)
+TotalProjectPoints / (dailyDevPower)
 = 29 points / ( 1 developer * 0.8 points per day)
 = ~37 days
 
@@ -121,7 +128,7 @@ Note: Dec has quite a few holidays, account for them so you dont footgun yoursel
 | 0 holidays     | 0 holidays       |
 | 2 days remain  | *** finished *** |
 
-Project Deadline = Feb 3 + 2 day
+Project Deadline = Feb 3 + 2 days
 = Feb 5
 
 ## Regular updates
@@ -132,7 +139,7 @@ Report progress every week or two
 [ARDA on GCP] Dec 23rd update (Code Complete on 2/5)
 TLDR:
   * Exactly on schedule
-Projection:
+Progress:
   * Expected: X days in (of Y days), or Z% into allocated working days
   * Actual: 16 points complete (of 29), or 49% complete
 More:
