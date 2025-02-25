@@ -1,4 +1,4 @@
-# Project Planning
+# Stress-Diffused Estimation: spread project stress over time instead of at the deadline
 
 Some details and recomendations for how to plan out a large project, and keep your stakeholders informed and happy during execution
 
