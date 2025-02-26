@@ -1,4 +1,4 @@
-# Stress-Diffused Estimation
+# Dynamic Forecasting
 
 A method of providing reality based project deadlines, through continuous in-timeline refinement.
 
