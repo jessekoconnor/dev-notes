@@ -1,4 +1,8 @@
-# Stress-Diffused Estimation: spread project stress over time instead of at the deadline
+# Stress-Diffused Estimation
+
+A method of providing reality based project deadlines, through continuous in-timeline refinement.
+
+## Spread project stress over time instead of allowing it to accumulate in bulk at the deadline
 
 Some details and recomendations for how to plan out a large project, and keep your stakeholders informed and happy during execution
 
