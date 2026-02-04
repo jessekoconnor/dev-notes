@@ -1,0 +1,79 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{fontspec}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{xcolor}
+
+% Colors
+\definecolor{accent}{HTML}{2563EB}
+\definecolor{subtle}{HTML}{64748B}
+
+% Fonts (requires XeLaTeX or LuaLaTeX)
+\setmainfont{EB Garamond}
+\setsansfont{Source Sans Pro}
+
+% Section formatting
+\titleformat{\section}{\Large\bfseries\sffamily\color{accent}}{}{0em}{}[\titlerule]
+\titleformat{\subsection}[runin]{\bfseries\sffamily}{}{0em}{}
+
+% Custom commands
+\newcommand{\role}[4]{%
+  \subsection{#1} \hfill \textcolor{subtle}{\small #2}\\
+  \textit{#3} \hfill \textcolor{subtle}{\small #4}\par
+}
+
+\newcommand{\achievement}[1]{\item \textbf{#1}}
+
+\begin{document}
+
+% Header
+\begin{center}
+  {\Huge\bfseries\sffamily Jesse O'Connor}\\[0.3em]
+  {\large\sffamily Backend Software Engineer}\\[0.5em]
+  {\small\color{subtle} 
+    603.731.5283 \quad $\bullet$ \quad 
+    jessekoconnor@gmail.com \quad $\bullet$ \quad
+    \href{https://www.jessekoconnor.com}{jessekoconnor.com}
+  }
+\end{center}
+
+\vspace{1em}
+
+% Summary
+\textbf{Accomplished individual contributor with 13 years of industry experience} 
+and a passion for mentoring engineers and designing scalable solutions.
+
+\section{Experience}
+
+\role{Meta, NYC (remote)}{March 2022 -- April 2023}
+     {Senior Software Engineer, Backend}{Kustomer Platform}
+
+Lead of kustomer platform automations team (Workflows, Business Rules, Queues \& Routing).
+
+\begin{itemize}[leftmargin=1.5em, itemsep=0.3em]
+  \achievement{Saved \$10k/mo and reduced bug count by 97\%} in the distributed 
+  routing system. Results derived from two projects proposed and led by Jesse 
+  that were delivered in parallel. (5 engineers × 6mo)
+  \begin{itemize}[leftmargin=1em, itemsep=0.1em, topsep=0.2em]
+    \item \textcolor{subtle}{\small Node.js, Mongo, Distributed Event Driven Systems, 
+          Race Conditions, Commands pattern}
+  \end{itemize}
+  
+  \achievement{Resolved core product bottleneck} by implementing a highly reliable 
+  and scalable solution architected in collaboration with the engineering director. 
+  Surpassed adoption goals, reaching 2k organizations. (3 engineers × 9mo)
+  
+  \achievement{Conducted org-wide presentation on Node.js} to 300 viewers, covering 
+  event loop, thread pool, concurrent programming, and blocking operations.
+\end{itemize}
+
+\section{Skills}
+
+\textbf{Languages:} Node.js (11 years), Python, TypeScript, JavaScript\\
+\textbf{Databases:} MongoDB (11 years), DynamoDB, PostgreSQL\\
+\textbf{Infrastructure:} AWS (Lambda, SQS, S3, EBS), Docker, Kubernetes\\
+\textbf{Patterns:} Event-Driven Architecture, Distributed Systems, CQRS
+
+\end{document}

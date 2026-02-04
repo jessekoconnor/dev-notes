@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jesse O'Connor - Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --accent: #0f4c81;
+      --accent-light: #e8f0f7;
+      --text: #1a1a1a;
+      --subtle: #5a5a5a;
+      --border: #d4d4d4;
+      --bg: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    @page {
+      size: letter;
+      margin: 0.5in;
+    }
+
+    body {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 11pt;
+      line-height: 1.5;
+      color: var(--text);
+      background: var(--bg);
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+    }
+
+    /* Header */
+    header {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid var(--accent);
+    }
+
+    h1 {
+      font-family: 'Inter', sans-serif;
+      font-size: 28pt;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: var(--accent);
+      margin-bottom: 0.25rem;
+    }
+
+    .title {
+      font-family: 'Inter', sans-serif;
+      font-size: 12pt;
+      color: var(--subtle);
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+    }
+
+    .contact {
+      font-size: 9.5pt;
+      color: var(--subtle);
+    }
+
+    .contact a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .contact span {
+      margin: 0 0.5rem;
+      color: var(--border);
+    }
+
+    /* Summary */
+    .summary {
+      font-size: 11pt;
+      margin-bottom: 1.25rem;
+      text-align: justify;
+    }
+
+    .summary strong {
+      color: var(--accent);
+    }
+
+    /* Sections */
+    section {
+      margin-bottom: 1.25rem;
+    }
+
+    h2 {
+      font-family: 'Inter', sans-serif;
+      font-size: 13pt;
+      font-weight: 600;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      border-bottom: 1px solid var(--accent);
+      padding-bottom: 0.25rem;
+      margin-bottom: 0.75rem;
+    }
+
+    /* Role */
+    .role {
+      margin-bottom: 1rem;
+    }
+
+    .role-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.25rem;
+    }
+
+    .company {
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 11pt;
+    }
+
+    .dates {
+      font-size: 9pt;
+      color: var(--subtle);
+    }
+
+    .role-title {
+      font-style: italic;
+      color: var(--subtle);
+      font-size: 10pt;
+      margin-bottom: 0.5rem;
+    }
+
+    .role-intro {
+      font-size: 10pt;
+      margin-bottom: 0.5rem;
+      color: var(--subtle);
+    }
+
+    /* Achievements */
+    ul {
+      padding-left: 1.25rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+      font-size: 10.5pt;
+    }
+
+    li strong {
+      color: var(--text);
+    }
+
+    .tech-stack {
+      font-size: 8.5pt;
+      color: var(--subtle);
+      font-family: 'Inter', sans-serif;
+      margin-top: 0.2rem;
+      padding-left: 0.5rem;
+      border-left: 2px solid var(--accent-light);
+    }
+
+    /* Skills */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 100px 1fr;
+      gap: 0.3rem 1rem;
+      font-size: 10pt;
+    }
+
+    .skill-category {
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      color: var(--accent);
+    }
+
+    /* Quote */
+    blockquote {
+      background: var(--accent-light);
+      border-left: 3px solid var(--accent);
+      padding: 0.75rem 1rem;
+      margin: 1rem 0;
+      font-style: italic;
+      font-size: 10pt;
+    }
+
+    blockquote cite {
+      display: block;
+      margin-top: 0.5rem;
+      font-style: normal;
+      font-size: 9pt;
+      color: var(--subtle);
+    }
+
+    /* Print styles */
+    @media print {
+      body {
+        padding: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Jesse O'Connor</h1>
+    <div class="title">Backend Software Engineer</div>
+    <div class="contact">
+      603.731.5283
+      <span>•</span>
+      <a href="mailto:jessekoconnor@gmail.com">jessekoconnor@gmail.com</a>
+      <span>•</span>
+      <a href="https://www.jessekoconnor.com">jessekoconnor.com</a>
+    </div>
+  </header>
+
+  <p class="summary">
+    <strong>Accomplished individual contributor with 13 years of industry experience</strong> 
+    and a passion for mentoring engineers and designing scalable solutions. Prioritizes 
+    reliability and scalability in event-driven distributed systems.
+  </p>
+
+  <section>
+    <h2>Experience</h2>
+
+    <div class="role">
+      <div class="role-header">
+        <span class="company">Meta, NYC (remote)</span>
+        <span class="dates">March 2022 – April 2023</span>
+      </div>
+      <div class="role-title">Senior Software Engineer, Backend — Kustomer Platform</div>
+      <p class="role-intro">Lead of platform automations team (Workflows, Business Rules, Queues & Routing).</p>
+      
+      <ul>
+        <li>
+          <strong>Saved $10k/mo and reduced bug count by 97%</strong> in the distributed 
+          routing system. Results derived from two projects proposed and led that were 
+          delivered in parallel. (5 engineers × 6mo)
+          <div class="tech-stack">Node.js · Mongo · Distributed Event Driven Systems · Commands pattern</div>
+        </li>
+        <li>
+          <strong>Resolved core product bottleneck</strong> by implementing a highly 
+          reliable and scalable solution architected in collaboration with the 
+          engineering director. Surpassed adoption goals, reaching 2k organizations. 
+          (3 engineers × 9mo)
+        </li>
+        <li>
+          <strong>Conducted org-wide presentation on Node.js</strong> to 300 viewers, 
+          covering event loop, thread pool, concurrent programming, and blocking operations.
+        </li>
+        <li>
+          <strong>Mentored L4 engineer to promotion</strong>, providing guidance on 
+          adapting to ambiguity and shifting from task-oriented to goal-oriented mindset.
+        </li>
+      </ul>
+
+      <blockquote>
+        "Jesse has a tremendously positive impact on the team... He is one of the most 
+        patient and knowledgeable engineers I've had the pleasure of working with."
+        <cite>— Eric Zorn, L5 Engineer, Meta (Mentee)</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <span class="skill-category">Languages</span>
+      <span>Node.js (11 years), Python, TypeScript, JavaScript</span>
+      
+      <span class="skill-category">Databases</span>
+      <span>MongoDB (11 years), DynamoDB, PostgreSQL</span>
+      
+      <span class="skill-category">Infrastructure</span>
+      <span>AWS (Lambda, SQS, S3, EBS), Docker, Kubernetes</span>
+      
+      <span class="skill-category">Patterns</span>
+      <span>Event-Driven Architecture, Distributed Systems, CQRS</span>
+    </div>
+  </section>
+
+</body>
+</html>
