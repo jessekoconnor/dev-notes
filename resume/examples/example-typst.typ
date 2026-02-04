@@ -31,7 +31,7 @@
 #let role(company, location, title, dates) = {
   grid(
     columns: (1fr, auto),
-    [*#company*, #location \ _#title_],
+    [*#company*, #location \ #emph(title)],
     align(right, text(fill: subtle, size: 9pt)[#dates])
   )
   v(0.3em)
