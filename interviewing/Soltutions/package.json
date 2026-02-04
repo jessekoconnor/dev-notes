@@ -1,0 +1,16 @@
+{
+  "name": "datastructures",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src",
+  "scripts": {
+    "test": "mocha",
+    "tdd": "nodemon --exec 'mocha'"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mocha": "^10.4.0",
+    "nodemon": "^3.1.0"
+  }
+}
