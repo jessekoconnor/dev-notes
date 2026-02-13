@@ -1,0 +1,233 @@
+{
+  "experiences": [
+    {
+      "id": "meta-2022",
+      "company": "Meta",
+      "location": "NYC, remote",
+      "title": "Senior Software Engineer, Backend",
+      "team": "Kustomer Platform Automations (Workflows, Business Rules, Queues & Routing)",
+      "start_date": "2022-03",
+      "end_date": "2023-04",
+      "role_description": "Lead of kustomer platform automations team, providing direction for integral initiatives and ultimately responsible for high-impact projects.",
+      "achievements": [
+        {
+          "id": "meta-cost-savings",
+          "title": "Saved $10k/mo and reduced bug count by 97%",
+          "description": "in the distributed routing system. Results derived from two projects proposed and led by Jesse that were delivered in parallel. (5 engineers x 6mo)",
+          "details": [
+            "Projects: Remove reverse syncing, Extend update pattern to blend commands & composite pattern"
+          ],
+          "tags": ["cost-savings", "bug-reduction", "distributed-systems", "leadership", "architecture"],
+          "tech_stack": ["Node.js", "Mongo", "Distributed Event Driven Systems", "Race Conditions", "Commands pattern", "Composite pattern"],
+          "metrics": {
+            "cost_savings": "$10k/mo",
+            "bug_reduction": "97%",
+            "team_size": 5,
+            "duration_months": 6
+          }
+        },
+        {
+          "id": "meta-bottleneck",
+          "title": "Resolved core product bottleneck",
+          "description": "by implementing a highly reliable and scalable solution architected in collaboration with the engineering director of kustomer @ Meta. This solution distributed the workload evenly throughout the hour and enforced rate limits on operations, relieving the bottleneck while protecting the backend services. (3 engineers x 9mo)",
+          "details": [
+            "Surpassed adoption goals, reaching 2k organizations, exceeding the targeted milestone of 1k in Q1'23"
+          ],
+          "tags": ["scalability", "architecture", "performance", "rate-limiting", "collaboration"],
+          "tech_stack": ["Node.js", "Mongo", "Distributing load", "Serial execution", "SQS visibility timeout window"],
+          "metrics": {
+            "adoption": "2k organizations (200% of target)",
+            "team_size": 3,
+            "duration_months": 9
+          }
+        },
+        {
+          "id": "meta-security",
+          "title": "Led in-depth investigation of denial of service vulnerability",
+          "description": "successfully identifying root causes and implementing preventive measures. (1 engineer x 2mo)",
+          "details": [
+            "Discovered retry loops and resource starvation as the underlying issues",
+            "Implemented effective solution by introducing an object size limit",
+            "Overcame misleading clues posed by resource starvation symptoms to successfully resolve the issue"
+          ],
+          "tags": ["security", "debugging", "investigation", "problem-solving"],
+          "tech_stack": ["Datadog", "Kibana", "SQS", "S3", "Event Driven Architecture"],
+          "metrics": {
+            "duration_months": 2
+          }
+        },
+        {
+          "id": "meta-mentorship",
+          "title": "Mentored L4 engineer to promotion",
+          "description": "providing guidance on adapting to ambiguity and shifting from a task-oriented to a goal-oriented mindset",
+          "details": [
+            "Focused on quality of work and project leadership skills through mentorship and support",
+            "Worked with EM to calibrate increases in mentee's responsibility, providing valuable insights over time into the mentees progress and blind spots"
+          ],
+          "tags": ["mentorship", "leadership", "career-development"],
+          "tech_stack": [],
+          "testimonial": {
+            "text": "Jesse has a tremendously positive impact on the team and the platform due to his robust amount of knowledge around the routing system and overall automations domain and his willingness to share. He is one of the most patient and knowledgeable engineers I've had the pleasure of working with.",
+            "author": "Eric Zorn, L5, Meta, Mentee"
+          }
+        },
+        {
+          "id": "meta-presentation",
+          "title": "Conducted an org-wide presentation on Node.js",
+          "description": "delivering comprehensive insights on the event loop, thread pool, concurrent programming, recursion, and blocking operations",
+          "details": [
+            "Engaged a large audience of 300 viewers during the presentation",
+            "Received overwhelmingly positive feedback for the informative and engaging session"
+          ],
+          "tags": ["teaching", "communication", "technical-leadership"],
+          "tech_stack": ["Node.js"],
+          "metrics": {
+            "audience_size": 300
+          }
+        },
+        {
+          "id": "meta-knowledge-sharing",
+          "title": "Enhanced team-wide expertise",
+          "description": "by taking the lead in conducting weekly knowledge-sharing meetings",
+          "details": [
+            "Covered various topics including event-driven architecture patterns, SQS visibility timeout, and monitoring tool capabilities",
+            "Facilitated learning and knowledge exchange within the team, promoting a culture of continuous growth and development"
+          ],
+          "tags": ["teaching", "team-building", "technical-leadership"],
+          "tech_stack": []
+        },
+        {
+          "id": "meta-testing",
+          "title": "Elevated developer confidence org-wide",
+          "description": "by extensively enhancing and improving accessibility of existing and automated integration testing suite and pushing test driven development",
+          "details": [
+            "Revamped the suite to ensure comprehensive coverage, reliability and ease of use in testing processes",
+            "Boosted overall software quality and reliability through the tremendously easy-to-use integration testing suite"
+          ],
+          "tags": ["testing", "quality", "developer-experience"],
+          "tech_stack": []
+        }
+      ]
+    },
+    {
+      "id": "kustomer-2020",
+      "company": "Kustomer",
+      "location": "NYC, remote",
+      "title": "Senior Software Engineer, Backend",
+      "team": "Kustomer Platform Automations (Workflows, Business Rules, Queues & Routing)",
+      "start_date": "2020-11",
+      "end_date": "2023-03",
+      "role_description": "Lead of kustomer platform automations team",
+      "achievements": [],
+      "note": "This overlaps with Meta (Kustomer was acquired by Meta in 2020)"
+    },
+    {
+      "id": "meltwater-2013",
+      "company": "Meltwater News",
+      "location": "NH",
+      "title": "Senior Software Engineer, Fullstack",
+      "start_date": "2013-01",
+      "end_date": "2019-11",
+      "role_description": "Full stack engineer and Lead of an agile team leveraging Node.js, Angular.js, and MongoDB to develop highly scalable solutions deployed on Amazon Web Services (AWS).",
+      "achievements": [
+        {
+          "id": "meltwater-growth",
+          "title": "Joined the company as a junior developer",
+          "description": "and demonstrated continuous growth and development, advancing to the role of senior engineer and ultimately team lead within a span of 7 years.",
+          "details": [
+            "Consistently exceeded performance expectations and took on increasing responsibilities, showcasing strong technical expertise, leadership skills, and a commitment to personal and professional growth."
+          ],
+          "tags": ["career-growth", "leadership"],
+          "tech_stack": []
+        },
+        {
+          "id": "meltwater-micro-frontend",
+          "title": "Increased deployment frequency",
+          "description": "by leading the successful migration of a frontend codebase from a monolithic repository to a micro frontend architecture. Required significant dependency adjustments and research into hosting a shared navigation system.",
+          "tags": ["architecture", "frontend", "deployment", "leadership"],
+          "tech_stack": []
+        },
+        {
+          "id": "meltwater-deployment",
+          "title": "Led the migration of the front end of a business application to AWS Elastic Beanstalk",
+          "description": "significantly reducing front end deployment time from 1 hour to 15 minutes.",
+          "tags": ["deployment", "aws", "performance", "leadership"],
+          "tech_stack": ["AWS Elastic Beanstalk"],
+          "metrics": {
+            "time_savings": "75% reduction (60min to 15min)"
+          }
+        },
+        {
+          "id": "meltwater-feature-envs",
+          "title": "Reduced development lifecycle",
+          "description": "by automating management of feature environments based on git hooks. Allowed stakeholders to see development in progress and give feedback earlier.",
+          "tags": ["devops", "automation", "developer-experience"],
+          "tech_stack": []
+        },
+        {
+          "id": "meltwater-email",
+          "title": "Developed a highly scalable and reliable event-driven email pipeline",
+          "description": "efficiently sending 0.5 million emails per day with all emails delivered within 2 minutes at peak hours.",
+          "tags": ["scalability", "event-driven", "performance"],
+          "tech_stack": [],
+          "metrics": {
+            "emails_per_day": "500k",
+            "delivery_time": "2 minutes at peak"
+          }
+        },
+        {
+          "id": "meltwater-gdpr",
+          "title": "Automated GDPR compliance through scripting",
+          "description": "drastically reducing ticket resolution time from 30 minutes to 30 seconds.",
+          "tags": ["automation", "compliance", "efficiency"],
+          "tech_stack": [],
+          "metrics": {
+            "time_savings": "99% reduction (30min to 30sec)"
+          }
+        },
+        {
+          "id": "meltwater-mongo",
+          "title": "Strategically removed multiple 40-gigabyte MongoDB collections without down time",
+          "description": "using a smart page and walk strategy, successfully avoiding database lockups and ensuring zero customer downtime.",
+          "tags": ["database", "mongodb", "reliability", "zero-downtime"],
+          "tech_stack": ["MongoDB"],
+          "metrics": {
+            "data_size": "40GB per collection"
+          }
+        }
+      ]
+    },
+    {
+      "id": "iol-2010",
+      "company": "Interoperability Laboratory",
+      "location": "Durham NH",
+      "title": "Developer and Test Technician",
+      "start_date": "2010-07",
+      "end_date": "2013-07",
+      "role_description": "Developed test suites for networking protocols",
+      "achievements": [
+        {
+          "id": "iol-dhcp",
+          "title": "Created DHCPv6 server test suite",
+          "description": "in adherence to RFC-3315 specifications for the core product. UAT's plug into test-bed and suite is executed; Routers that pass get DHCPv6 certification.",
+          "tags": ["testing", "networking", "protocols"],
+          "tech_stack": ["DHCPv6", "RFC-3315"]
+        },
+        {
+          "id": "iol-networking",
+          "title": "Fostered a deep understanding of networking fundamentals",
+          "description": "including DNS and DHCP concepts, the limits of IPv4 versus IPv6, and the OSI 7 layer model.",
+          "tags": ["networking", "learning"],
+          "tech_stack": []
+        },
+        {
+          "id": "iol-unix",
+          "title": "Acclimated to common unix concepts",
+          "description": "such as process, file, and network management. Familiarized myself with unix commands and bash scripting.",
+          "tags": ["unix", "bash", "learning"],
+          "tech_stack": ["Unix", "Bash"]
+        }
+      ]
+    }
+  ]
+}

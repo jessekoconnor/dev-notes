@@ -1,0 +1,22 @@
+{
+  "personal": {
+    "name": "Jesse O'Connor",
+    "title": "Backend Software Engineer",
+    "location": "Greater Boston",
+    "phone": "603.731.5283",
+    "email": "jessekoconnor@gmail.com",
+    "website": "https://www.jessekoconnor.com",
+    "summary": "Jesse is an accomplished individual contributor with 13 years of industry experience and a passion for both mentoring engineers and designing scalable solutions.",
+    "highlights": [
+      "Transforming ambiguous problems into well-defined solutions, and ensuring seamless implementation and mitigating project risks.",
+      "Prioritizing reliability and scalability in event-driven distributed systems, resulting in high-performing, deterministic, cost efficient, and adaptable architectures.",
+      "Elevating team performance and engineers' capabilities via mentoring and strategically identifying work that aligns with current skill levels.",
+      "Leading and motivating a team of five engineers, driving project success through effective leadership, coordination and accountability. Teacher of all engineers.",
+      "Providing regular stakeholder updates to maintain transparency and alignment. Jesse Identifies and corrects deadline misses early-on with comprehensive estimation techniques and resource allocation.",
+      "11 years of experience with Node.js & Mongo, contributed to Node.js."
+    ],
+    "contributions": [
+      "Contributed to Node.js"
+    ]
+  }
+}

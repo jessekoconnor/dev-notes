@@ -1,0 +1,48 @@
+{
+  "projects": [
+    {
+      "id": "dashmobile",
+      "name": "DashMobile",
+      "tagline": "Scrape your favorite websites for your favorite content, and then view it all in one place.",
+      "start_date": "2022-07",
+      "status": "active",
+      "description": "React native app supported by node.js functions in aws lambda and using Dynamodb caching.",
+      "achievements": [
+        {
+          "id": "dashmobile-app",
+          "title": "React native app that scrapes my favorite websites dynamically",
+          "description": "so I can see the live music happening nearby.",
+          "tags": ["mobile", "react-native", "scraping"],
+          "tech_stack": ["React Native"]
+        },
+        {
+          "id": "dashmobile-backend",
+          "title": "Back end scrapes live data on each invocation",
+          "description": "saving a user 15 mins/day by scraping up-to-date info on local venues websites. Implemented with nodejs and lambda functions that utilize puppeteer",
+          "tags": ["backend", "lambda", "scraping"],
+          "tech_stack": ["Node.js", "AWS Lambda", "Puppeteer"],
+          "details": [
+            "Leverages a slim chromium version below lambda function size limit",
+            "Extracts data from web pages using puppeteer, waits for a selector before it starts scraping",
+            "Different sites run in parallel lambda functions at the same time for maximal performance",
+            "Cache results for one day to avoid abusive behavior toward local businesses websites",
+            "Skillfully parses date strings in a wide range of formats, ensuring comprehensive compatibility with nearly any date format",
+            "Supports recursive and iterative scraping configuration by accumulating results in a recursive and iterative manner to create extremely powerful configuration objects"
+          ],
+          "github": "https://github.com/jessekoconnor/server-side-slinger"
+        },
+        {
+          "id": "dashmobile-frontend",
+          "title": "Front end mobile application",
+          "description": "Implemented in react-native as a mobile application, compatible with both IOS and Android. Front end utilizes google material design",
+          "tags": ["mobile", "react-native", "ui"],
+          "tech_stack": ["React Native", "Material Design"],
+          "github": "https://github.com/jessekoconnor/WebSurfer",
+          "download": {
+            "ios": "https://testflight.apple.com/join/br5KTP6i"
+          }
+        }
+      ]
+    }
+  ]
+}

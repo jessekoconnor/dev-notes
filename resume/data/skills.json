@@ -1,0 +1,43 @@
+{
+  "skills": {
+    "languages": [
+      {"name": "Node.js", "years": 11, "proficiency": "expert"},
+      {"name": "JavaScript", "years": 13, "proficiency": "expert"},
+      {"name": "TypeScript", "years": 5, "proficiency": "advanced"},
+      {"name": "Python", "years": 3, "proficiency": "intermediate"},
+      {"name": "Java", "years": 4, "proficiency": "intermediate"},
+      {"name": "C/C++", "years": 2, "proficiency": "basic"}
+    ],
+    "databases": [
+      {"name": "MongoDB", "years": 11, "proficiency": "expert"},
+      {"name": "DynamoDB", "years": 2, "proficiency": "intermediate"},
+      {"name": "PostgreSQL", "years": 1, "proficiency": "basic"}
+    ],
+    "infrastructure": [
+      {"name": "AWS Lambda", "proficiency": "advanced"},
+      {"name": "AWS SQS", "proficiency": "advanced"},
+      {"name": "AWS S3", "proficiency": "advanced"},
+      {"name": "AWS Elastic Beanstalk", "proficiency": "advanced"},
+      {"name": "Docker", "proficiency": "intermediate"},
+      {"name": "Kubernetes", "proficiency": "basic"}
+    ],
+    "patterns": [
+      {"name": "Event-Driven Architecture", "proficiency": "expert"},
+      {"name": "Distributed Systems", "proficiency": "expert"},
+      {"name": "CQRS", "proficiency": "advanced"},
+      {"name": "Commands Pattern", "proficiency": "advanced"},
+      {"name": "Composite Pattern", "proficiency": "advanced"},
+      {"name": "Microservices", "proficiency": "advanced"}
+    ],
+    "frontend": [
+      {"name": "React", "proficiency": "advanced"},
+      {"name": "React Native", "proficiency": "advanced"},
+      {"name": "Angular.js", "proficiency": "intermediate"}
+    ],
+    "tools": [
+      {"name": "Datadog", "proficiency": "advanced"},
+      {"name": "Kibana", "proficiency": "advanced"},
+      {"name": "Puppeteer", "proficiency": "advanced"}
+    ]
+  }
+}

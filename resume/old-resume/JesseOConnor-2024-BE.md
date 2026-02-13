@@ -1,6 +1,6 @@
 #  **Backend Software Engineer** Greater Boston		603.731.5283	 **Jesse O’Connor** jessekoconnor@gmail.com		Site: [https://www.jessekoconnor.com](http://www.jessekoconnor.com/)
 
-**Jesse is an accomplished individual contributor with 13 years of industry experience** and a passion for both mentoring engineers and designing scalable solutions. Jesse’s accomplishments include: 
+**Jesse is an accomplished individual contributor with 15 years of industry experience** and a passion for both mentoring engineers and designing scalable solutions. Jesse’s accomplishments include: 
 
 * **Transforming ambiguous problems into well-defined solutions**, and ensuring seamless implementation and mitigating project risks.  
 * **Prioritizing reliability and scalability in event-driven distributed systems**, resulting in high-performing, deterministic, cost efficient, and adaptable architectures.  
@@ -11,7 +11,7 @@
 
 # **Experience**
 
-## March  2022 \- April 2023
+## March  2022 - April 2023
 
 ### **Meta, NYC, remote** *\- Senior Software Engineer, Backend*
 

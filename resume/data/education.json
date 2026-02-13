@@ -1,0 +1,17 @@
+{
+  "education": [
+    {
+      "id": "unh",
+      "school": "University of New Hampshire",
+      "location": "Durham NH",
+      "degree": "B.S. in Computer Science",
+      "start_date": "2010-07",
+      "end_date": "2013-07",
+      "highlights": [
+        "Programmed in Java, C/C++, JavaScript, and Python",
+        "Simulated thread context switching in C and Assembly language; saving the state of a thread and loading the context of another thread before resuming execution",
+        "Courses: Artificial Intelligence, Algorithms, Data Structures, Computer Networks, Graphics, Assembly Language & Machine Organization, Operating System Fundamentals, and Advanced Object Oriented programming"
+      ]
+    }
+  ]
+}
